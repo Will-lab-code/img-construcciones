@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contacto | IMG Construcciones</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="./assets/icon.jpg" type="image/x-icon">
+  <script defer src="js/scripts.js"></script>
+</head>
+<body>
+  <header class="site-header alt">
+    <div class="container nav-wrap">
+      <div class="brand">IMG <span>Construcciones</span></div>
+      <nav class="nav">
+        <a href="index.html#inicio">Inicio</a>
+        <a href="index.html#servicios">Servicios</a>
+        <a href="proyectos.html">Proyectos</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container grid-2">
+      <div>
+        <h1>Contacto</h1>
+        <p class="lead">Contanos sobre tu proyecto y te responderemos a la brevedad.</p>
+        <form class="form" name="contacto" method="post" data-netlify="true">
+          <input type="hidden" name="form-name" value="contacto">
+          <label>Nombre y apellido
+            <input type="text" name="nombre" required>
+          </label>
+          <label>Email
+            <input type="email" name="email" required>
+          </label>
+          <label>Teléfono (opcional)
+            <input type="tel" name="telefono">
+          </label>
+          <label>Mensaje
+            <textarea name="mensaje" rows="5" required></textarea>
+          </label>
+          <button class="btn" type="submit">Enviar</button>
+        </form>
+      </div>
+      <div class="card">
+        <h3>Datos de contacto</h3>
+        <ul class="links">
+          <li><a href="tel:+541168141334">011 6814 1334</a></li>
+          <li><a href="tel:+541121646419">011 2164 6419</a></li>
+          <li><a href="mailto:img.proyecta2025@gmail.com">img.proyecta2025@gmail.com</a></li>
+        </ul>
+        <div class="map-wrap">
+          <iframe title="Mapa de cobertura" src="https://www.openstreetmap.org/export/embed.html?bbox=-58.9%2C-34.9%2C-58.2%2C-34.5&layer=mapnik" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container foot-grid">
+      <div class="brand">IMG <span>Construcciones</span></div>
+      <div></div>
+      <div><a class="btn" href="index.html#inicio">Volver al inicio</a></div>
+    </div>
+    <div class="copy">© 2025 IMG Construcciones</div>
+  </footer>
+</body>
+</html>
