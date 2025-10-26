@@ -44,3 +44,51 @@ document.querySelectorAll('.nav a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+// ====== MODALES DE PROYECTOS ======
+(function () {
+  const openModal = (id) => {
+    const modal = document.getElementById(`modal-${id}`);
+    if (!modal) return;
+    modal.classList.add('active');
+    modal.setAttribute('aria-hidden', 'false');
+    // Foco accesible en el botón cerrar
+    const closeBtn = modal.querySelector('.close-modal');
+    closeBtn && closeBtn.focus();
+  };
+
+  const closeModal = (modal) => {
+    modal.classList.remove('active');
+    modal.setAttribute('aria-hidden', 'true');
+  };
+
+  // Abrir modales al click en tarjeta
+  document.querySelectorAll('.card.photo').forEach(card => {
+    card.addEventListener('click', () => {
+      const modalId = card.getAttribute('data-modal');
+      openModal(modalId);
+    });
+  });
+
+  // Cerrar al click en botón
+  document.querySelectorAll('.close-modal').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const modal = e.target.closest('.modal');
+      if (modal) closeModal(modal);
+    });
+  });
+
+  // Cerrar al click fuera del contenido
+  window.addEventListener('click', (e) => {
+    if (e.target.classList && e.target.classList.contains('modal')) {
+      closeModal(e.target);
+    }
+  });
+
+  // Cerrar con ESC
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.modal.active').forEach(closeModal);
+    }
+  });
+})();
