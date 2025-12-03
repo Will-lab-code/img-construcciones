@@ -495,3 +495,18 @@ h1, h2, h3, h4 { color: var(--dark); margin: 0 0 .5rem; }
 /* (Opcional) Mejorar interacción de tarjetas */
 .cards.gallery .card.photo { cursor: pointer; }
 .cards.gallery .card.photo:hover { transform: translateY(-2px); transition: transform .15s ease; }
+
+/* icono wsp */
+.icon-wsp {
+  width: 20px;
+  height: 20px;
+  margin-right: 0px;
+  vertical-align: middle;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
